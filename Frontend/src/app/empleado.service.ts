@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class EmpleadoService {
-  ruta = 'http://34.122.112.23:4200';
+  ruta = 'http://localhost:4200/';
   constructor(private http:HttpClient) { }
 
   create_employes(empleado:Empleado){
