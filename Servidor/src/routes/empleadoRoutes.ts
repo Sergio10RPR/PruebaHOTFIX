@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import gamesController from '../controllers/empleadoControlador';
+import empleadoControlador from '../controllers/empleadoControlador';
 
 class EmpleadoRoutes {
     public router : Router = Router();
@@ -8,12 +8,10 @@ class EmpleadoRoutes {
         this.config();
     }
     config(): void{
-        //this.router.get('/',(req,res)=>res.send('Games'));
-        this.router.get('/',gamesController.read); //Read
-        //this.router.get('/:id',gamesController.getOne);
-        this.router.post('/',gamesController.create); //Create
-        this.router.put('/:id',gamesController.update); //Update
-        this.router.delete('/:id',gamesController.delete); //Delete
+        this.router.get('/',empleadoControlador.read); //Read
+        this.router.post('/',empleadoControlador.create); //Create
+        this.router.put('/:id',empleadoControlador.update); //Update
+        this.router.delete('/:id',empleadoControlador.delete); //Delete
         
     }
 }

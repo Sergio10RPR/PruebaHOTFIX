@@ -11,9 +11,7 @@ class EmpleadoRoutes {
         this.config();
     }
     config() {
-        //this.router.get('/',(req,res)=>res.send('Games'));
         this.router.get('/', empleadoControlador_1.default.read); //Read
-        //this.router.get('/:id',gamesController.getOne);
         this.router.post('/', empleadoControlador_1.default.create); //Create
         this.router.put('/:id', empleadoControlador_1.default.update); //Update
         this.router.delete('/:id', empleadoControlador_1.default.delete); //Delete
