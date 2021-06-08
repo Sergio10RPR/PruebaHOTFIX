@@ -1,1 +1,7 @@
 /Frontend/node_modules
+<<<<<<< HEAD
+/Servidor/node_modules
+=======
+/Servidor/node_modules
+/Frontend
+>>>>>>> feature/servidor
