@@ -1,8 +1,3 @@
-
-<div class="container p-3 text-center">
-    <h4> CRUD practica 1</h4>
-    <button type="button" class="btn btn-primary float-right"  routerLink="/crud/create">nuevo</button>
-</div>
 <br>
 <br>
 <br>
@@ -37,7 +32,7 @@
                                 <td>{{empleado.telefono}}</td>
                                 <td>{{empleado.direccion}}</td>
                                 <td>{{empleado.sueldo}}</td>
-                                <td><button type="button" class="btn btn-primary">Update</button></td>
+                                <td style="text-align: center;"><button type="button" class="btn btn-dark" (click)="Update(empleado)"><i class="bi bi-arrow-repeat"></i></button></td>
                                 <td><button type="button" class="btn btn-danger">Delete</button></td>
                                 </tr>
                         </tbody>
