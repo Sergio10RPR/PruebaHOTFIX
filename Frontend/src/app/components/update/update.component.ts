@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Empleado } from 'src/app/moels/empleado';
 import Swal from 'sweetalert2';
 import { EmpleadoService } from '../../empleado.service'
@@ -20,13 +21,19 @@ export class UpdateComponent implements OnInit {
     direccion: ''
   }
   
-  constructor(private EmpleadoService:EmpleadoService) { }
+  constructor(private EmpleadoService:EmpleadoService,private route:Router) { }
 
   ngOnInit(): void {
-    this.miEmpleado= JSON.parse(sessionStorage.getItem('Empleado_Update'))
+    let empleado = JSON.parse(sessionStorage.getItem('Empleado_Update'))
+    if(!empleado){
+      this.route.navigate(['home'])
+    }
+    this.miEmpleado = empleado
+    sessionStorage.removeItem('Empleado_Update')
   }
 
   update(){
+    console.log(this.miEmpleado)
     this.EmpleadoService.update_employes(this.miEmpleado).subscribe(
       result=>{
         this.updateOK();
