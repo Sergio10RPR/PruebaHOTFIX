@@ -9,7 +9,8 @@ class EmpleadoRoutes {
     }
     config(): void{
         this.router.get('/',empleadoControlador.read); //Read
-        this.router.post('/empleado',empleadoControlador.create); //Create
+        this.router.post('/',empleadoControlador.create); //Create
+        this.router.put('/:id',empleadoControlador.update); //Update
         
     }
 }

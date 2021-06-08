@@ -17,6 +17,13 @@ class EmpleadoControlador {
         res.json({message: 'Empleado Guardado'});
     }
 
+    /**######### UPDATE ######## */
+    public async update(req:Request,res:Response){
+        const { id } = req.params;
+        await pool.query('UPDATE empleado set ? WHERE id = ?',[req.body,id]);
+        res.json({text: 'Empleado Actualizado'});
+       
+    }
     
 }
 
