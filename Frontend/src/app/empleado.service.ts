@@ -20,4 +20,8 @@ export class EmpleadoService {
   update_employes(empleado:Empleado){
     return this.http.put(`${this.ruta}/practica1/empleados/${empleado.id}`, empleado);
   }
+
+  delete_employes(id:any){
+    return this.http.delete(`${this.ruta}/practica1/empleados${id}`);
+  }
 }

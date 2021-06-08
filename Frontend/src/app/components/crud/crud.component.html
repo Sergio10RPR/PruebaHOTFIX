@@ -6,7 +6,7 @@
         <div class="col-md-12">
             <h4>LISTA DE EMPLEADOS</h4>
             <div class="table-responsive">
-                <table id="tabla" class="table table-bordred table-striped">
+                <table id="tabla" class="table table-bordred table-dark">
                     <thead>
                        
                         
@@ -33,7 +33,7 @@
                                 <td>{{empleado.direccion}}</td>
                                 <td>{{empleado.sueldo}}</td>
                                 <td style="text-align: center;"><button type="button" class="btn btn-dark" (click)="Update(empleado)"><i class="bi bi-arrow-repeat"></i></button></td>
-                                <td><button type="button" class="btn btn-danger">Delete</button></td>
+                                <td><button type="button" class="btn btn-danger" (click)="Delete(empleado.id)">Delete</button></td>
                                 </tr>
                         </tbody>
                 </table>
