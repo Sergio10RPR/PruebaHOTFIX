@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EmpleadoService } from '../../empleado.service';
 
 @Component({
   selector: 'app-crud',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./crud.component.css']
 })
 export class CrudComponent implements OnInit {
-
-  constructor() { }
+  empleados: any = [];
+  constructor(private empleadoService: EmpleadoService) { }
 
   ngOnInit(): void {
+    this.empleadoService.read_employes().subscribe(
+      res => {
+        this.empleados = res;
+      },
+      err => console.error(err)
+    );
   }
 
 }

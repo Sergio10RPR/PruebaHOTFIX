@@ -3,3 +3,47 @@
     <h4> CRUD practica 1</h4>
     <button type="button" class="btn btn-primary float-right"  routerLink="/crud/create">nuevo</button>
 </div>
+<br>
+<br>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h4>LISTA DE EMPLEADOS</h4>
+            <div class="table-responsive">
+                <table id="tabla" class="table table-bordred table-striped">
+                    <thead>
+                       
+                        
+                        <th>Id</th>
+                         <th>Nombre</th>
+                          <th>Apellido</th>
+                          <th>Edad</th>
+                          <th>Correo</th>
+                           <th>Telefono</th>
+                           <th>Direccion</th>
+                            <th>Sueldo</th>
+                            <th>Update</th>
+                            <th>Delete</th>
+                        </thead>
+                        <tbody *ngFor="let empleado of empleados">
+                            <tr>
+                                
+                                <td>{{empleado.id}}</td>
+                                <td>{{empleado.nombre}}</td>
+                                <td>{{empleado.apellido}}</td>
+                                <td>{{empleado.edad}}</td>
+                                <td>{{empleado.correo}}</td>
+                                <td>{{empleado.telefono}}</td>
+                                <td>{{empleado.direccion}}</td>
+                                <td>{{empleado.sueldo}}</td>
+                                <td><button type="button" class="btn btn-primary">Update</button></td>
+                                <td><button type="button" class="btn btn-danger">Delete</button></td>
+                                </tr>
+                        </tbody>
+                </table>
+            </div>
+          
+        </div>
+    </div>
+</div>

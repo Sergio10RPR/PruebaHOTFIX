@@ -6,8 +6,12 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class EmpleadoService {
-  ruta = 'http://localhost:4200/';
+  ruta = 'http://localhost:3000';
   constructor(private http:HttpClient) { }
+  /**READ EMPLEADOS */
+  read_employes(){
+    return this.http.get(`${this.ruta}/crud`);
+  }
 
   create_employes(empleado:Empleado){
     return this.http.post(`${this.ruta}/empleado`, empleado);
