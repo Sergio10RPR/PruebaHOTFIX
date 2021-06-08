@@ -9,6 +9,15 @@ class EmpleadoControlador {
         res.json(games);
 
     }
+
+
+    /**######### CREATE ######## */
+    public async create(req:Request,res:Response): Promise<void>{
+        await pool.query('INSERT INTO empleado set ?',[req.body]);
+        res.json({message: 'Empleado Guardado'});
+    }
+
+    
 }
 
 const empleadoControlador = new EmpleadoControlador();
