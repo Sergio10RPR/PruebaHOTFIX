@@ -10,10 +10,14 @@ export class EmpleadoService {
   constructor(private http:HttpClient) { }
   /**READ EMPLEADOS */
   read_employes(){
-    return this.http.get(`${this.ruta}/crud`);
+    return this.http.get(`${this.ruta}/practica1/empleados`);
   }
 
   create_employes(empleado:Empleado){
-    return this.http.post(`${this.ruta}/empleado`, empleado);
+    return this.http.post(`${this.ruta}/practica1/empleados`, empleado);
+  }
+
+  update_employes(empleado:Empleado){
+    return this.http.put(`${this.ruta}/practica1/empleados/${empleado.id}`, empleado);
   }
 }
