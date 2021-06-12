@@ -14,7 +14,7 @@ class EmpleadoRoutes {
         this.router.get('/', empleadoControlador_1.default.read); //Read
         this.router.post('/', empleadoControlador_1.default.create); //Create
         this.router.put('/:id', empleadoControlador_1.default.update); //Update
-        this.router.delete('/:id', empleadoControlador_1.default.delete); //Delete
+        this.router.delete('/:id', gamesController.delete); //Delete
     }
 }
 const empleadoRoutes = new EmpleadoRoutes();

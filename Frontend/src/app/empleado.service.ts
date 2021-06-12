@@ -22,6 +22,6 @@ export class EmpleadoService {
   }
 
   delete_employes(id:any){
-    return this.http.delete(`${this.ruta}/practica1/empleados${id}`);
+    return this.http.delete(`${this.ruta}/practica1/empleados/${id}`);
   }
 }
